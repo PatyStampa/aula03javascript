@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 02. Você está no Brasil, e para temperatura usamos o grau Celsius.
+Porém, quando você for contrato para trabalhar como programador JavaScript 
+no exterior, deverá usar graus Fahrenheit.
+--> 
+ <h2>Conversor de Temperatura (°C → °F)</h2>
+
+ <form action="">
+Digite a temperatura em Celsius (°C):  <br/>
+<input type="number" id = "celsius"/>
+<br/><br/>
+<button type="button"   onclick="converter()"> converter </button>
+
+</form>
+
+<div id="resposta"></div>
+
+<script>
+        function converter() {
+            // Lê o valor digitado
+            let celsius = parseFloat(document.getElementById("celsius").value);
+
+            // Fórmula de conversão: Fahrenheit = (Celsius * 9/5) + 32
+            let fahrenheit = (celsius * 9/5) + 32;
+
+            // Mostra o resultado
+            document.getElementById("resposta").innerHTML = 
+                celsius.toFixed(1) + " °C equivalem a " + fahrenheit.toFixed(1) + " °F";
+        }
+    </script>
+
+
+
+</body>
+</html>
