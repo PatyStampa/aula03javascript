@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro Econômico</title>
+</head>
+<body>
+   <!-- Um novo modelo de carro, super econômico foi lançado.
+Ele faz 20 km com 1 litro de combustível.
+Cada litro de combustível custa R$ 5,00.
+Faça um programa que pergunte ao usuário quanto de dinheiro ele tem e em
+seguida diga quantos litros de combustível ele pode comprar e quantos 
+kilometros o carro consegue andar com este tanto de combustível.
+--> 
+ <h2>Cálculo de Combustível e Distância</h2>
+
+ <form action="">
+Quanto você pode gastar em gasolina?  <br/>
+<input type="number" id = "dinheiro"/>
+<br/><br/>
+<button type="button"   onclick="calcular()"> calcular </button>
+
+</form>
+
+<div id="resposta"></div>
+
+<script>
+        function calcular() {
+            // Lê o valor digitado
+            let dinheiro = parseFloat(document.getElementById("dinheiro").value);
+
+             // Dados fixos do problema
+            const precoLitro = 5; // R$ 5 por litro
+            const kmPorLitro = 20; // 20 km por litro
+
+             // Cálculos
+            let litros = dinheiro / precoLitro;
+            let distancia = litros * kmPorLitro;
+            
+            // Mostra o resultado
+            document.getElementById("resposta").innerHTML = 
+                "Dinheiro disponível: R$ " + dinheiro.toFixed(2) + "<br/>" +
+                "Pode comprar: " + litros.toFixed(2) + " litros de combustível<br/>" +
+                "O carro pode percorrer: " + distancia.toFixed(2) + " km";
+        }
+    </script>
+
+
+
+</body>
+</html>
