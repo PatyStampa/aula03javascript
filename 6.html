@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--6. Faça um programa onde o usuário digitará o seu salário e o programa escreverá, 
+    na tela, o valor que será descontado de vale transporte (6%), 
+    de INSS (no momento descontar 8%) e quanto sobrará de salário. -->
+
+<h2>Cálculo de Descontos no Salário</h2>
+
+    <form>
+        Digite o salário bruto (R$): <br/>
+        <input type="number" id="salario"> <br/><br/>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+<div id="resposta"></div>
+
+ <script>
+        function calcular() {
+            // Pega o valor do salário digitado
+            let salario = parseFloat(document.getElementById("salario").value);
+
+             // Calcula os descontos
+            let vt = salario * 0.06;  // 6% de vale-transporte
+            let inss = salario * 0.08; // 8% de INSS
+            let salarioLiquido = salario - vt - inss;
+
+            // Saída
+            document.getElementById("resposta").innerHTML = 
+                "Salário bruto: R$ "  + salario + "<br/>" +
+                "Desconto de Vale-Transporte (6%): R$ " + vt + "<br/>"+
+                "Desconto de INSS (8%): R$ " + inss + "<br/><hr>" +
+                "Salário Líquido: R$ " + salarioLiquido + "<br/>" 
+            }
+
+
+    </script>
+
+
+
+
+</body>
+
+
+</html>

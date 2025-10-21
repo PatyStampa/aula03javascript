@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7.1</title>
+</head>
+<body>
+   <!--  01. Escreva um programa que pede o raio de um círculo, e em seguida exiba
+o perímetro e área do círculo.  -->
+    
+    <script>
+//entrada
+let raio = parseFloat(prompt('Digite o valor do raio'));
+
+//processamento
+//let areac = 3.14 * raio**2;
+//let areac = 3.14  * (raio * raio);
+let areac = Math.PI * Math.pow(raio,2);
+
+/*🔹 Math.PI
+
+Math é um objeto nativo do JavaScript que contém várias funções e constantes matemáticas.
+
+PI é uma constante que representa o número π (3.1415926535...).
+
+👉 Ou seja, Math.PI = 3.14159
+
+🔹 Math.pow(raio, 2)
+
+Math.pow(x, y) significa “x elevado a y”.
+
+Então Math.pow(raio, 2) quer dizer raio².*/
+
+
+
+//saída
+
+document.writeln("<br> Valor apurado " + areac);
+document.writeln("<br> Arredondada para cima " +Math.ceil(areac));
+document.writeln("<br> Arredondada para baixo " +Math.floor(areac));
+document.writeln("<br> Fixa em casa decimal " +areac.toFixed(2));
+
+// "document.writeln" pra escrever direto na página
+// "parseFloat" transforma o valor digitado em número decimal
+// "parseInt" transforma o valor digitado em número inteiro
+
+    </script>
+</body>
+</html>
